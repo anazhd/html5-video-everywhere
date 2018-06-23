@@ -28,6 +28,7 @@ You'll need:
 
 - [Node.js](https://nodejs.org/), v8.x or higher
 - [npm](https://www.npmjs.com/)
+- make `apt install make`
 
 Optionally, you may like:
 
@@ -43,6 +44,9 @@ git clone https://github.com/lejenome/html5-video-everywhere/
 cd html5-video-everywhere
 npm install -g gulp-cli  # or: yarn global add gulp-cli
 npm install  # or: yarn
+mkdir certs
+cd certs
+2>/dev/null openssl genrsa 2048 | openssl pkcs8 -topk8 -nocrypt -out chrome.pem
 ```
 
 To build the addon for Firefox:
